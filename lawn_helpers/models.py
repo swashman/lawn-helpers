@@ -16,7 +16,10 @@ class General(models.Model):
 
         managed = False
         default_permissions = ()
-        permissions = (("basic_access", "Basic access to this app"),)
+        permissions = (
+            ("basic_access", "Basic access to this app"),
+            ("it_commands", "Can use IT commands"),
+        )
 
 
 class Link(models.Model):
@@ -28,6 +31,9 @@ class Link(models.Model):
     class Meta:
         default_permissions = ()
         permissions = (("manage_links", "Can manage links"),)
+
+    def __str__(self):
+        return self.name
 
 
 class GroupWelcome(models.Model):

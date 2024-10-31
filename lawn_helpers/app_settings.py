@@ -6,6 +6,8 @@ LAWN_HELPERS_COGS = getattr(
     settings,
     "LAWN_HELPERS_COGS",
     [
-        "asmek_authcogs.cogs.about",  # make sure to remove the about cog from aadiscordbot if using this
+        "lawn_helpers.cogs.auth",
+        "lawn_helpers.cogs.it",
+        "lawn_helpers.cogs.links",
     ],
 )
